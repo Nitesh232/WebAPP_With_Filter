@@ -23,14 +23,14 @@ public class ValFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
 		try {
-			response.setContentType("text/html");
+			response.setContentType("text-html");
 			PrintWriter out = response.getWriter();
 			
-			String sid = request.getParameter("sid");
-			String sname = request.getParameter("sname");
-			String sage = request.getParameter("sage");
-			String semail = request.getParameter("semail");
-			String smobile = request.getParameter("smobile");
+			String sid = request.getParameter("id");
+			String sname = request.getParameter("name");
+			String sage = request.getParameter("age");
+			String semail = request.getParameter("email");
+			String smobile = request.getParameter("mobile");
 			
 			String sid_error = "", sname_error = "", sage_error = "", semail_error = "", smobile_error = "";
 			
@@ -115,25 +115,25 @@ public class ValFilter implements Filter {
 				
 				out.println("<tr>");
 				out.println("<td>Student Name : </td>");
-				out.println("<td><input type='text' name='sname' value='"+sname+"'/></td>");
+				out.println("<td><input type='text' name='sname' value='"+name+"'/></td>");
 				out.println("<td><font color='red' size='5'><b>"+sname_error+"</b></td>");
 				out.println("</tr>");
 				
 				out.println("<tr>");
 				out.println("<td>Student Age : </td>");
-				out.println("<td><input type='text' name='sage' value='"+sage+"'/></td>");
+				out.println("<td><input type='text' name='sage' value='"+age+"'/></td>");
 				out.println("<td><font color='red' size='5'><b>"+sage_error+"</b></td>");
 				out.println("</tr>");
 				
 				out.println("<tr>");
 				out.println("<td>Student Email : </td>");
-				out.println("<td><input type='text' name='semail' value='"+semail+"'/></td>");
+				out.println("<td><input type='text' name='semail' value='"+email+"'/></td>");
 				out.println("<td><font color='red' size='5'><b>"+semail_error+"</b></td>");
 				out.println("</tr>");
 				
 				out.println("<tr>");
 				out.println("<td>Student Mobile : </td>");
-				out.println("<td><input type='text' name='smobile' value='"+smobile+"'/></td>");
+				out.println("<td><input type='text' name='smobile' value='"+mobile+"'/></td>");
 				out.println("<td><font color='red' size='5'><b>"+smobile_error+"</b></td>");
 				out.println("</tr>");
 				
