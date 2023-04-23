@@ -14,7 +14,7 @@ Here I have created a form with html as registrationform.html which asks the use
 Here is the basic registration form without use of CSS.
 
 
-![Registration Form](https://raw.githubusercontent.com/Nitesh232/WebAPP_With_Filter/main/images/registrationform.png)
+![Registration Form](/images/registrationform.png)
 
 
 
